@@ -1,0 +1,50 @@
+{% load static %} 
+
+<!doctype html>
+<html lang="es-ar">
+
+<head>
+  <title>{% block title %} Codecrusaders {% endblock title %}</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <header>
+    <div>
+        <h1 style="text-align:center">Codecrusaders</h1>
+        <nav  class="nav nav-pills flex-column flex-sm-row">
+            <a class="flex-sm-fill text-sm-center nav-link active" href="{% url 'index' %}">Inicio</a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="{% url 'listar_noticias' %}">Noticias</a>
+            <a class="flex-sm-fill text-sm-center nav-link active" href="{% url 'crear_noticia' %}">Crear Noticia</a> 
+            <a class="flex-sm-fill text-sm-center nav-link" href="{% url 'acerca_de' %}">Acerca de</a>
+            <a class="flex-sm-fill text-sm-center nav-link active" href="{% url 'contacto' %}">Contacto</a>
+        </nav>
+    </div>    
+    <hr>
+    {% block content %}
+    {% endblock %}
+  
+  <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+    <div class="container text-center">
+      <small>Copyright &copy; Codecursaders</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

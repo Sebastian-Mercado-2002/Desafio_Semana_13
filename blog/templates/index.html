@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+    <h2>Bienvenido a nuestro sitio de noticias</h2>
+    <p>¡Encuentra aquí las noticias más recientes!</p>
+    <h3>Noticias destacadas</h3>
+    <ul>
+        {% for noticia in noticias_destacadas %}
+            <li>{{ noticia.titulo }} - {{ noticia.fecha_publicacion }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'listar_noticias' %}">Ver todas las noticias</a>
+{% endblock %}
